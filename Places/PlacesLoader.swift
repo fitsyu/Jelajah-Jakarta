@@ -108,11 +108,12 @@ struct PlacesLoader {
     
     
 //    let uri = "https://kmbmicro.xyz/hackjak/listplace.php?id=6,7,8,9,10"
+        let uri = "https://kmbmicro.xyz/hackjak/listplace.php"
     
     let lat = location.coordinate.latitude
     let lng = location.coordinate.longitude
     
-    let uri = "https://kmbmicro.xyz/hackjak/listplacerandom.php?lat=\(lat)&lng=\(lng)"
+//    let uri = "https://kmbmicro.xyz/hackjak/listplacerandom.php?lat=\(lat)&lng=\(lng)"
     
     Alamofire.request(uri).responseJSON { response in
       

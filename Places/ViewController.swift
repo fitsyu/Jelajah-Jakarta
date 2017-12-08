@@ -83,24 +83,28 @@ extension ViewController: CLLocationManagerDelegate {
     
     if locations.count > 0 {
       let location = locations.last!
-      if location.horizontalAccuracy < 10 {
+      if location.horizontalAccuracy < 100 {
         manager.stopUpdatingLocation()
         let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         mapView.region = region
         
+        
         if !startedLoadingPOIs {
           startedLoadingPOIs = true
           
-          
+        
+//          print("loading pois")
           
           
           let loader = PlacesLoader()
 
         
-          
+//          print("getting nearby parks..")
           loader.getNearbyPlace(location: location, onDone: { json, error in
             
+            
+//            print(json)
             
             if let reply = json {
               

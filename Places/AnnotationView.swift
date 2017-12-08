@@ -48,9 +48,9 @@ class AnnotationView: ARAnnotationView {
     btPlay?.removeFromSuperview()
     
     
-    let bgImg = UIImageView(frame: CGRect(x: -60, y: 30, width: 60, height: 60))
-    bgImg.image = #imageLiteral(resourceName: "cameraview")
-    self.addSubview(bgImg)
+//    let bgImg = UIImageView(frame: CGRect(x: -60, y: 30, width: 60, height: 60))
+//    bgImg.image = #imageLiteral(resourceName: "cameraview")
+//    self.addSubview(bgImg)
     
     let label = UILabel(frame: CGRect(x: 10, y: 0, width: self.frame.size.width, height: 30))
     label.font = UIFont.systemFont(ofSize: 16)
@@ -79,7 +79,7 @@ class AnnotationView: ARAnnotationView {
       distanceLabel?.text = String(format: "%.2f m", annotation.distanceFromUser)
       
       
-      if annotation.distanceFromUser < 100 {
+      if annotation.distanceFromUser <= 500 {
         btPlay?.isEnabled = true
         btPlay?.setTitle("Play", for: .normal)
         
@@ -105,7 +105,7 @@ class AnnotationView: ARAnnotationView {
     
     
     
-    delegate?.didTouch(annotationView: self)
+//    delegate?.didTouch(annotationView: self)
     
     
     guard let btPlay = btPlay else { return }
@@ -114,7 +114,7 @@ class AnnotationView: ARAnnotationView {
 
       //      playVideo()
       
-//      delegate?.didTouch(annotationView: self)
+      delegate?.didTouch(annotationView: self)
 
     
     } else {
