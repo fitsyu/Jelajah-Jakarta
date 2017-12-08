@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.1)
+  - PopupDialog (0.5.4)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - PopupDialog (~> 0.5.4)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  PopupDialog: 75cf955693590b0cb2fdde00223fb65d99c57247
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 73853a566f929221874891ff489b8db3c11d7610
+
+COCOAPODS: 1.2.0
